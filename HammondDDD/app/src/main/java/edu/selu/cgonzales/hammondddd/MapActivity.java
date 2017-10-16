@@ -11,6 +11,8 @@ import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import edu.selu.cgonzales.hammondddd.Utils.MapUtils;
+
 public class MapActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
@@ -42,6 +44,6 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback 
         // Add a marker in Sydney and move the camera
         LatLng hammond = new LatLng(30.504358, -90.461197);
         mMap.addMarker(new MarkerOptions().position(hammond).title("Hammond, LA"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(hammond, 16));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(hammond, MapUtils.ZOOM_STREETS));
     }
 }
