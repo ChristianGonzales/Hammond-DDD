@@ -44,6 +44,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="edu.selu.cgonzales.hammondddd.MainActivity" />
         </activity>
+        <activity android:name=".ContactActivity"></activity>
     </application>
 
 </manifest>

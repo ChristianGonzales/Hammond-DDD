@@ -1,8 +1,15 @@
 <resources>
+    <!-- Navigation Strings -->
     <string name="app_name">DDD Hammond</string>
     <string name="title_home">Home</string>
     <string name="title_map">Map</string>
-    <string name="title_search">Search</string>
+    <string name="title_contact">Contact Us</string>
+
+    <!-- Contact Strings -->
+    <string name="company_name">Hammond Downtown Development</string>
+    <string name="company_street">#2 West Thomas St.</string>
+    <string name="company_city">Hammond, LA 70401</string>
+    <string name="company_phone">(985)277-5681</string>
 
     <!-- Action Strings -->
     <string name="action_search">Search</string>
