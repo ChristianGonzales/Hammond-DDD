@@ -18,14 +18,12 @@ public class ContactActivity extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_home:
-//                    mTextMessage.setText(R.string.title_home);
                     openHome();
                     return true;
                 case R.id.navigation_map:
                     openMap();
                     return true;
                 case R.id.navigation_contact:
-//                    mTextMessage.setText(R.string.title_contact);
                     return true;
             }
             return false;
@@ -41,9 +39,6 @@ public class ContactActivity extends AppCompatActivity {
                         case R.id.action_search:
                             System.out.println("Search");
                             return true;
-//                    case R.id.action_contact:
-//                        System.out.println("Contact");
-//                        return true;
                         case R.id.action_settings:
                             System.out.println("Settings");
                             return true;

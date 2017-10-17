@@ -10,6 +10,8 @@
     <string name="company_street">#2 West Thomas St.</string>
     <string name="company_city">Hammond, LA 70401</string>
     <string name="company_phone">(985)277-5681</string>
+    <string name="company_person_1">Chelsea Tallo \nExecutive Director \ntallo_ca@hammond.org</string>
+    <string name="company_person_2">Olivia Graziano \nAdministrative Assistant And Farmers Market Manager \ngraziano_om@hammond.org</string>
 
     <!-- Action Strings -->
     <string name="action_search">Search</string>

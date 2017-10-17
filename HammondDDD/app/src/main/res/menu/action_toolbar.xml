@@ -6,12 +6,12 @@
         android:id="@+id/action_search"
         android:icon="@drawable/ic_search_black_24dp"
         android:title="@string/action_search"
-        app:showAsAction="ifRoom" />
+        app:showAsAction="ifRoom|collapseActionView"
+        app:actionViewClass="android.support.v7.widget.SearchView" />
 
-    <!-- <item
-        android:id="@+id/action_contact"
-        android:title="@string/action_contact"
-        app:showAsAction="never" /> -->
+    <!-- todo - add the search action to the search view
+         see - https://developer.android.com/training/appbar/action-views.html
+         for details -->
 
     <item
         android:id="@+id/action_settings"
