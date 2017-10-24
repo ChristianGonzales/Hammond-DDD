@@ -11,6 +11,7 @@ import android.view.MenuItem;
 import android.widget.TextView;
 
 // TODO - initialize the data map on app start
+// Need to create a class that extends Application
 
 public class MainActivity extends AppCompatActivity {
 
