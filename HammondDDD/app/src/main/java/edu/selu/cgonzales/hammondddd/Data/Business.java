@@ -1,40 +1,17 @@
 package edu.selu.cgonzales.hammondddd.Data;
 
-import com.google.android.gms.maps.model.LatLng;
+public class Business extends Entity {
 
-public class Business {
-    private String name;
-    private String address;
     private String phoneNumber;
     private String category;
     private String website;
-    private LatLng latLon;
 
-    public Business(String name, String address,
-                    String phoneNumber, String category,
-                    String website, LatLng latLon) {
-        this.name = name;
-        this.address = address;
+    public Business(String name, String location, String phoneNumber, String category,
+                    String website){
+        super(name, location);
         this.phoneNumber = phoneNumber;
         this.category = category;
         this.website = website;
-        this.latLon = latLon;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
     }
 
     public String getPhoneNumber() {
@@ -59,13 +36,5 @@ public class Business {
 
     public void setWebsite(String website) {
         this.website = website;
-    }
-
-    public LatLng getLatLon() {
-        return latLon;
-    }
-
-    public void setLatLon(LatLng latLon) {
-        this.latLon = latLon;
     }
 }

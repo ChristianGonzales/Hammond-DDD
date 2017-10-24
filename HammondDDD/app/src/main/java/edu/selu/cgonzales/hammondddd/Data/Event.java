@@ -2,27 +2,26 @@ package edu.selu.cgonzales.hammondddd.Data;
 
 import java.util.Date;
 
-public class Event {
+public class Event extends Entity{
 
-    private String name;
     public String subName;
     private Date eventDate;
     private String description;
 
-    public Event(String name, String subName, Date eventDate, String description) {
-        this.name = name;
+    public Event(String name, String location, String subName,
+                 Date eventDate, String description){
+        super(name, location);
         this.subName = subName;
-
         this.eventDate = eventDate;
         this.description = description;
     }
 
-    public String getName() {
-        return name;
+    public String getSubName() {
+        return subName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setSubName(String subName) {
+        this.subName = subName;
     }
 
     public Date getEventDate() {
@@ -39,13 +38,5 @@ public class Event {
 
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    public String getSubName() {
-        return subName;
-    }
-
-    public void setSubName(String subName) {
-        this.subName = subName;
     }
 }

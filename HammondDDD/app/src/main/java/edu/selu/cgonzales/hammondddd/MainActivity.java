@@ -10,6 +10,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
+// TODO - initialize the data map on app start
+
 public class MainActivity extends AppCompatActivity {
 
     private TextView mTextMessage;
