@@ -4,24 +4,14 @@ import java.util.Date;
 
 public class Event extends Entity{
 
-    public String subName;
     private Date eventDate;
     private String description;
 
-    public Event(String name, String location, String subName,
+    public Event(String name, String location,
                  Date eventDate, String description){
         super(name, location);
-        this.subName = subName;
         this.eventDate = eventDate;
         this.description = description;
-    }
-
-    public String getSubName() {
-        return subName;
-    }
-
-    public void setSubName(String subName) {
-        this.subName = subName;
     }
 
     public Date getEventDate() {
