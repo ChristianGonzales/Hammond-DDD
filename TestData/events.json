@@ -1,38 +1,40 @@
-[
-  {
-    "name" : "DDD Board of Directors Meeting",
-    "location" : "312 E. Charles St., Hammond, LA 70401",
-    "eventDate" : "10/30/2017 5:30pm",
-    "description" : "DDD Board of Directors Meeting \n5:30pm \nCity Council Chambers"
-  },
-  {
-    "name" : "Shower of Blessings: Halleujah Night",
-    "location" : "Downtown Hammond, LA",
-    "eventDate" : "10/31/2017 6:00pm",
-    "description" : "Come out for our annual hallelujah night for a safe and fun environment with lots of candy. It's FREE and open to the public."
-  },
-  {
-    "name" : "Design Committee Meeting",
-    "location" : "312 N. Charles St., Hammond, LA 70401",
-    "eventDate" : "11/02/2017 11:30am",
-    "description" : "Monthly Design Committee Meeting \nThursday, Oct 5, 2017 \n 11:30am \nCity Council Chambers"
-  },
-  {
-    "name" : "Downtown Past Sundown",
-    "location" : "Downtown Hammond, LA",
-    "eventDate" : "11/16/2017 5:00pm",
-    "description" : "Ghosts, goblins and creatures of fright are all welcome to our trick-or-treat night! Come to Downtown Hammond during Downtown Past Sundown on Thursday, October 19th from 5-8pm for our first annual community trick-or-treat!  Start off your evening at the Moonlight Farmers Market where little monsters can create their own candy bag and receive a list of WITCH way to go! Stroll Downtown to participating businesses to trick-or-treat. Business will not only be open to fill your candy bags, they’ll have specials and sales too! We hope you have a FANGtastic time shopping locally on October 19!"
-  },
-  {
-    "name" : "Design Committee Meeting",
-    "location" : "312 N. Charles St., Hammond, LA 70401",
-    "eventDate" : "12/07/2017 11:30pm",
-    "description" : "Monthly Design Committee Meeting \nThursday, Dec 7, 2017 \n 11:30am \nCity Council Chambers"
-  },
-  {
-    "name" : "Downtown Past Sundown",
-    "location" : "Downtown Hammond, LA",
-    "eventDate" : "01/18/2018 5:00pm",
-    "description" : "Ghosts, goblins and creatures of fright are all welcome to our trick-or-treat night! Come to Downtown Hammond during Downtown Past Sundown on Thursday, October 19th from 5-8pm for our first annual community trick-or-treat!  Start off your evening at the Moonlight Farmers Market where little monsters can create their own candy bag and receive a list of WITCH way to go! Stroll Downtown to participating businesses to trick-or-treat. Business will not only be open to fill your candy bags, they’ll have specials and sales too! We hope you have a FANGtastic time shopping locally on October 19!"
-  }
-]
+{
+  "events" : [
+    {
+      "name" : "DDD Board of Directors Meeting",
+      "location" : "312 E. Charles St., Hammond, LA 70401",
+      "eventDate" : "10/30/2017 5:30pm",
+      "description" : "DDD Board of Directors Meeting \n5:30pm \nCity Council Chambers"
+    },
+    {
+      "name" : "Shower of Blessings: Halleujah Night",
+      "location" : "Downtown Hammond, LA",
+      "eventDate" : "10/31/2017 6:00pm",
+      "description" : "Come out for our annual hallelujah night for a safe and fun environment with lots of candy."
+    },
+    {
+      "name" : "Design Committee Meeting",
+      "location" : "312 N. Charles St., Hammond, LA 70401",
+      "eventDate" : "11/02/2017 11:30am",
+      "description" : "Monthly Design Committee Meeting \nThursday, Oct 5, 2017 \n 11:30am \nCity Council Chambers"
+    },
+    {
+      "name" : "Downtown Past Sundown",
+      "location" : "Downtown Hammond, LA",
+      "eventDate" : "11/16/2017 5:00pm",
+      "description" : "Ghosts, goblins and creatures of fright are all welcome to our trick-or-treat night!"
+    },
+    {
+      "name" : "Design Committee Meeting",
+      "location" : "312 N. Charles St., Hammond, LA 70401",
+      "eventDate" : "12/07/2017 11:30pm",
+      "description" : "Monthly Design Committee Meeting \nThursday, Dec 7, 2017 \n 11:30am \nCity Council Chambers"
+    },
+    {
+      "name" : "Downtown Past Sundown",
+      "location" : "Downtown Hammond, LA",
+      "eventDate" : "01/18/2018 5:00pm",
+      "description" : "Ghosts, goblins and creatures of fright are all welcome to our trick-or-treat night!"
+    }
+  ]
+}
