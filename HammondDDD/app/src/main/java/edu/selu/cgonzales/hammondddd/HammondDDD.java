@@ -46,17 +46,13 @@ public class HammondDDD extends Application{
                     " \nThursday, Oct 5, 2017 \n 11:30am \nCity Council Chambers"));
             eventList.add(new Event("Downtown Past Sundown", "Downtown Hammond, LA",
                     formatter.parse("11/16/2017 5:00 PM"), "Ghosts, goblins and creatures of fright " +
-                    "are all welcome to our trick-or-treat night! Come to Downtown Hammond during " +
-                    "Downtown Past Sundown on Thursday, October 19th from 5-8pm for our first annual" +
-                    " community trick-or-treat!"));
+                    "are all welcome to our trick-or-treat night!"));
             eventList.add(new Event("Design Committee Meeting", "312 N. Charles St., Hammond, LA 70401",
                     formatter.parse("12/07/2017 11:30 PM"), "Monthly Design Committee Meeting " +
                     "\nThursday, Dec 7, 2017 \n 11:30am \nCity Council Chambers"));
             eventList.add(new Event("Downtown Past Sundown", "Downtown Hammond, LA",
                     formatter.parse("01/18/2018 5:00 PM"), "Ghosts, goblins and creatures of fright " +
-                    "are all welcome to our trick-or-treat night! Come to Downtown Hammond during " +
-                    "Downtown Past Sundown on Thursday, October 19th from 5-8pm for our first annual" +
-                    " community trick-or-treat!"));
+                    "are all welcome to our trick-or-treat night!"));
         } catch (ParseException e) {
             System.out.println("Parse Exception");
         }

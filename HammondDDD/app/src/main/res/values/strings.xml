@@ -5,6 +5,9 @@
     <string name="title_map">Map</string>
     <string name="title_contact">Contact Us</string>
 
+    <!-- Default Strings -->
+    <string name="no_events">Error Loading Events...</string>
+
     <!-- Contact Strings -->
     <string name="company_name">Hammond Downtown Development</string>
     <string name="company_street">#2 West Thomas St.</string>

@@ -8,10 +8,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ListView;
 import android.widget.TextView;
-
-// TODO - initialize the data map on app start
-// Need to create a class that extends Application
 
 public class MainActivity extends AppCompatActivity {
 
@@ -62,10 +62,22 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        HammondDDD context = (HammondDDD) this.getApplicationContext();
+
+        EventsArrayAdapter adapter = new EventsArrayAdapter(this, context.getEventList());
+        ListView eventsList = (ListView) findViewById(R.id.eventsList);
+        eventsList.setAdapter(adapter);
+        eventsList.setEmptyView(findViewById(R.id.emptyEventsView));
+        eventsList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                // TODO - create an intent to send the open the event details page
+            }
+        });
+
         Toolbar parentToolbar = (Toolbar) findViewById(R.id.parent_toolbar);
         setSupportActionBar(parentToolbar);
 
-        mTextMessage = (TextView) findViewById(R.id.message);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
 
         parentToolbar.setOnMenuItemClickListener(menuItemClickListener);
