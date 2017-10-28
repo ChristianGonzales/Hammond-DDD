@@ -1,6 +1,7 @@
 package edu.selu.cgonzales.hammondddd;
 
 import android.content.Intent;
+import android.net.sip.SipAudioCall;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
@@ -11,33 +12,16 @@ import android.view.MenuItem;
 
 public class ContactActivity extends AppCompatActivity {
 
-    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
-            = new BottomNavigationView.OnNavigationItemSelectedListener() {
-
-        @Override
-        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-            switch (item.getItemId()) {
-                case R.id.navigation_home:
-                    openHome();
-                    return true;
-                case R.id.navigation_map:
-                    openMap();
-                    return true;
-                case R.id.navigation_contact:
-                    return true;
-            }
-            return false;
-        }
-
-    };
-
-    private Toolbar.OnMenuItemClickListener menuItemClickListener =
+    private Toolbar.OnMenuItemClickListener parentToolbarListener =
             new Toolbar.OnMenuItemClickListener() {
                 @Override
                 public boolean onMenuItemClick(MenuItem item) {
                     switch (item.getItemId()){
                         case R.id.action_search:
                             System.out.println("Search");
+                            return true;
+                        case R.id.action_contact:
+                            // Do nothing since we are in this activity already
                             return true;
                         case R.id.action_settings:
                             System.out.println("Settings");
@@ -55,10 +39,7 @@ public class ContactActivity extends AppCompatActivity {
         Toolbar parentToolbar = (Toolbar) findViewById(R.id.parent_toolbar);
         setSupportActionBar(parentToolbar);
 
-        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
-
-        parentToolbar.setOnMenuItemClickListener(menuItemClickListener);
-        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+        parentToolbar.setOnMenuItemClickListener(parentToolbarListener);
     }
 
     @Override
