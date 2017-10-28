@@ -38,6 +38,7 @@ public class ContactActivity extends AppCompatActivity {
 
         Toolbar parentToolbar = (Toolbar) findViewById(R.id.parent_toolbar);
         setSupportActionBar(parentToolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         parentToolbar.setOnMenuItemClickListener(parentToolbarListener);
     }
