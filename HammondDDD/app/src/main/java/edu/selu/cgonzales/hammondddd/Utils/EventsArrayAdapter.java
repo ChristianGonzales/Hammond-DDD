@@ -1,4 +1,4 @@
-package edu.selu.cgonzales.hammondddd;
+package edu.selu.cgonzales.hammondddd.Utils;
 
 import android.app.Activity;
 import android.support.v7.widget.RecyclerView;
@@ -11,6 +11,7 @@ import android.widget.TextView;
 import java.util.List;
 
 import edu.selu.cgonzales.hammondddd.Data.Event;
+import edu.selu.cgonzales.hammondddd.R;
 
 public class EventsArrayAdapter extends ArrayAdapter<Event> {
 
