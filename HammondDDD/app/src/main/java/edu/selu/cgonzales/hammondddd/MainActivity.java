@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.support.design.widget.NavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -34,10 +35,41 @@ public class MainActivity extends AppCompatActivity {
             }
         };
 
+    private NavigationView.OnNavigationItemSelectedListener navDrawerItemSelectedListener
+            = new NavigationView.OnNavigationItemSelectedListener(){
+
+        @Override
+        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+            switch (item.getItemId()){
+                case R.id.navigation_map:
+                    openMap();
+                    return true;
+                case R.id.navigation_eat:
+                    return true;
+                case R.id.navigation_drink:
+                    return true;
+                case R.id.navigation_shop:
+                    return true;
+                case R.id.navigation_play:
+                    return true;
+                case R.id.navigation_more:
+                    return true;
+            }
+            return false;
+        }
+    };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Toolbar parentToolbar = (Toolbar) findViewById(R.id.parent_toolbar);
+        setSupportActionBar(parentToolbar);
+        parentToolbar.setOnMenuItemClickListener(parentToolbarListener);
+
+        NavigationView navigation = (NavigationView) findViewById(R.id.navigation);
+        navigation.setNavigationItemSelectedListener(navDrawerItemSelectedListener);
 
         HammondDDD context = (HammondDDD) this.getApplicationContext();
 
@@ -52,10 +84,6 @@ public class MainActivity extends AppCompatActivity {
 //            }
 //        });
 
-        Toolbar parentToolbar = (Toolbar) findViewById(R.id.parent_toolbar);
-        setSupportActionBar(parentToolbar);
-
-        parentToolbar.setOnMenuItemClickListener(parentToolbarListener);
     }
 
     @Override
