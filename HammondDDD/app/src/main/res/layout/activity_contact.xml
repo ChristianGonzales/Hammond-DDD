@@ -9,7 +9,7 @@
     tools:context="edu.selu.cgonzales.hammondddd.ContactActivity">
 
     <android.support.v7.widget.Toolbar
-        android:id="@+id/parent_toolbar"
+        android:id="@+id/child_toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="?attr/colorPrimary"
