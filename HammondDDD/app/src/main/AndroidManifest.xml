@@ -40,7 +40,7 @@
 
         <activity
             android:name=".MapActivity"
-            android:label="@string/title_activity_map">
+            android:label="@string/action_map">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="edu.selu.cgonzales.hammondddd.MainActivity" />
