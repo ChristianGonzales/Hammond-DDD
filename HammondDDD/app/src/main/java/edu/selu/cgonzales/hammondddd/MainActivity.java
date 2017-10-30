@@ -32,9 +32,9 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.action_contact:
                         openContact();
                         return true;
-                    case R.id.action_settings:
-                        System.out.println("Settings");
-                        return true;
+//                    case R.id.action_settings:
+//                        System.out.println("Settings");
+//                        return true;
                 }
                 return false;
             }
