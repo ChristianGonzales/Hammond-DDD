@@ -20,7 +20,7 @@ public class HammondDDD extends Application{
             HammondDDD context = (HammondDDD.getApplicationContext();
             do stuff...
      */
-//    private Map<String, List<Business>> businessList;
+    private Map<String, List<Business>> businessList;
     private List<Event> eventList;
 
     /**
@@ -56,10 +56,29 @@ public class HammondDDD extends Application{
         } catch (ParseException e) {
             System.out.println("Parse Exception");
         }
+
+        businessList = new HashMap<>();
+        List<Business> tempList = new ArrayList<>();
+        tempList.add(new Business("Berry Patch Cafe", "201 West Thomas Street, Hammond, LA 70401",
+                "985-542-1188", "restaurants", "http://berrypatchcafe.net/"));
+        tempList.add(new Business("Blackened Brew", "112 West Thomas Street, Hammond, LA 70401",
+                "985-393-0169", "restaurants", "https://www.facebook.com/Blackened-Brew-1633715110225929/?rf=1550644385176214"));
+        tempList.add(new Business("Brady's", "110 Southwest Railroad Avenue, Hammond, LA 70403",
+                "985-542-6333", "restaurants", "http://www.bradysdowntown.com/"));
+        tempList.add(new Business("Cafe Street Seafood Station", "308 South Cafe Street, Hammond, LA 70403",
+                "985-340-3891", "restaurants", "http://catestreet308.com/"));
+        tempList.add(new Business("China Garden", "1725 Southwest Railroad Avenue, Hammond, LA 70403",
+                "985-542-6022", "restaurants", "http://www.chinagardenhammond.com/"));
+        tempList.add(new Business("Church's Chicken", "1610 Southwest Railroad Avenue, Hammond, LA 70403",
+                "985-542-0692", "restaurants", "http://www.churchs.com/"));
+        businessList.put("eat", tempList);
     }
 
     public List<Event> getEventList() {
         return eventList;
     }
 
+    public Map<String, List<Business>> getBusinessList(){
+        return businessList;
+    }
 }
