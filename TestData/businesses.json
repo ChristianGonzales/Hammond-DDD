@@ -1,0 +1,64 @@
+{
+  "eat" : [
+    {
+      "name" : "Berry Patch Cafe",
+      "location" : "201 West Thomas Street, Hammond, LA 70401",
+      "phoneNumber" : "985-542-1188",
+      "category" : [
+        "eat",
+        "restaurants"
+      ],
+      "website" : "http://berrypatchcafe.net/"
+    },
+    {
+      "name" : "Blackened Brew",
+      "location" : "112 West Thomas Street, Hammond, LA 70401",
+      "phoneNumber" : "985-393-0169",
+      "category" : [
+        "eat",
+        "restaurants"
+      ],
+      "website" : "https://www.facebook.com/Blackened-Brew-1633715110225929/?rf=1550644385176214"
+    },
+    {
+      "name" : "Brady's",
+      "location" : "110 Southwest Railroad Avenue, Hammond, LA 70403",
+      "phoneNumber" : "985-542-6333",
+      "category" : [
+        "eat",
+        "restaurants"
+      ],
+      "website" : "http://www.bradysdowntown.com/"
+    },
+    {
+      "name" : "Cafe Street Seafood Station",
+      "location" : "308 South Cafe Street, Hammond, LA 70403",
+      "phoneNumber" : "985-340-3891",
+      "category" : [
+        "eat",
+        "restaurants"
+      ],
+      "website" : "http://catestreet308.com/"
+    },
+    {
+      "name" : "China Garden",
+      "location" : "1725 Southwest Railroad Avenue, Hammond, LA 70403",
+      "phoneNumber" : "985-542-6022",
+      "category" : [
+        "eat",
+        "restaurants"
+      ],
+      "website" : "http://www.chinagardenhammond.com/"
+    },
+    {
+      "name" : "Church's Chicken",
+      "location" : "1610 Southwest Railroad Avenue, Hammond, LA 70403",
+      "phoneNumber" : "985-542-0692",
+      "category" : [
+        "eat",
+        "restaurants"
+      ],
+      "website" : "http://www.churchs.com/"
+    }
+  ]
+}
