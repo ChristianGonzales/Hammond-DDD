@@ -1,7 +1,6 @@
 package edu.selu.cgonzales.hammondddd.Utils;
 
 import android.app.Activity;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,7 +25,7 @@ public class EventsArrayAdapter extends ArrayAdapter<Event> {
     }
 
     public EventsArrayAdapter(Activity context, List<Event> events){
-        super(context, R.layout.events_list_item, events);
+        super(context, R.layout.businesses_list_item, events);
         this.context = context;
         this.events = events;
     }
@@ -37,7 +36,7 @@ public class EventsArrayAdapter extends ArrayAdapter<Event> {
 
         if (rowView == null){
             LayoutInflater inflater = context.getLayoutInflater();
-            rowView = inflater.inflate(R.layout.events_list_item, null);
+            rowView = inflater.inflate(R.layout.businesses_list_item, null);
             ViewHolder viewHolder = new ViewHolder();
             viewHolder.eventDate = (TextView) rowView.findViewById(R.id.eventDate);
             viewHolder.eventName = (TextView) rowView.findViewById(R.id.eventName);

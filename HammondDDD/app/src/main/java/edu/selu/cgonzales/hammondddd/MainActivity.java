@@ -50,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
                     openMap();
                     return true;
                 case R.id.navigation_eat:
+                    openBusiness("eat");
                     return true;
                 case R.id.navigation_drink:
                     return true;
@@ -110,5 +111,10 @@ public class MainActivity extends AppCompatActivity {
     public void openContact(){
         Intent openContactIntent = new Intent(this, ContactActivity.class);
         startActivity(openContactIntent);
+    }
+
+    public void openBusiness(String category){
+        Intent openBusinessIntent = new Intent(this, BusinessActivity.class);
+        startActivity(openBusinessIntent);
     }
 }
