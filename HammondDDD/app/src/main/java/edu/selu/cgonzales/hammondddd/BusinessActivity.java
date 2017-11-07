@@ -37,6 +37,7 @@ public class BusinessActivity extends AppCompatActivity {
         final ListView businessList = (ListView) findViewById(R.id.businessList);
         businessList.setAdapter(adapter);
         businessList.setEmptyView(findViewById(R.id.emptyBusinessView));
+        // TODO - add an on click listener
     }
 
     @Override

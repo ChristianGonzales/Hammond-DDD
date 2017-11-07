@@ -10,6 +10,7 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.maps.model.PolylineOptions;
 
 import edu.selu.cgonzales.hammondddd.Utils.MapUtils;
 
@@ -43,7 +44,21 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback 
 
         // Add a marker in Sydney and move the camera
         LatLng hammond = new LatLng(30.504358, -90.461197);
-        mMap.addMarker(new MarkerOptions().position(hammond).title("Hammond, LA"));
+        LatLng stop1 = new LatLng(30.517316, -90.468857);
+        LatLng stop2 = new LatLng(30.504612, -90.479336);
+        LatLng stop3 = new LatLng(30.508551, -90.455016);
+        LatLng stop4 = new LatLng(30.497199, -90.463793);
+        mMap.addMarker(new MarkerOptions().position(stop1).title("Stop 1"));
+        mMap.addMarker(new MarkerOptions().position(stop2).title("Stop 2"));
+        mMap.addMarker(new MarkerOptions().position(stop3).title("Stop 3"));
+        mMap.addMarker(new MarkerOptions().position(stop4).title("Stop 4"));
+        mMap.addPolyline(new PolylineOptions().geodesic(true)
+            .add(stop1)
+            .add(stop2)
+            .add(stop3)
+            .add(stop4)
+            .add(stop1)
+        ); // Need to make this a little more filled out
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(hammond, MapUtils.ZOOM_STREETS));
     }
 }
