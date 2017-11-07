@@ -1,13 +1,10 @@
 package edu.selu.cgonzales.hammondddd;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.preference.DialogPreference;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -50,14 +47,19 @@ public class MainActivity extends AppCompatActivity {
                     openMap();
                     return true;
                 case R.id.navigation_eat:
+                    openBusiness("eat");
                     return true;
                 case R.id.navigation_drink:
+                    openBusiness("drink");
                     return true;
                 case R.id.navigation_shop:
+                    openBusiness("shop");
                     return true;
                 case R.id.navigation_play:
+                    openBusiness("play");
                     return true;
                 case R.id.navigation_more:
+                    openBusiness("more");
                     return true;
             }
             return false;
@@ -110,5 +112,11 @@ public class MainActivity extends AppCompatActivity {
     public void openContact(){
         Intent openContactIntent = new Intent(this, ContactActivity.class);
         startActivity(openContactIntent);
+    }
+
+    public void openBusiness(String extra){
+        Intent openBusinessIntent = new Intent(this, BusinessActivity.class);
+        openBusinessIntent.putExtra(Intent.EXTRA_TEXT, extra);
+        startActivity(openBusinessIntent);
     }
 }
