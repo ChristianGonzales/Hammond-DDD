@@ -22,6 +22,7 @@ public class HammondDDD extends Application{
      */
     private Map<String, List<Business>> businessList;
     private List<Event> eventList;
+    private Business viewBusiness;
 
     /**
      * Creates the lists for the application to use, stored in the application's context.
@@ -80,5 +81,13 @@ public class HammondDDD extends Application{
 
     public Map<String, List<Business>> getBusinessList(){
         return businessList;
+    }
+
+    public Business getViewBusiness() {
+        return viewBusiness;
+    }
+
+    public void setViewBusiness(Business viewBusiness) {
+        this.viewBusiness = viewBusiness;
     }
 }

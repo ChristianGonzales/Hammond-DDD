@@ -26,4 +26,6 @@
     <string name="action_shop">Shop</string>
     <string name="action_play">Play</string>
     <string name="action_more">More</string>
+    <string name="action_directions">Get Directions</string>
+    <string name="action_website">Website</string>
 </resources>

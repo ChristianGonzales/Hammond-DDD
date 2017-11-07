@@ -1,10 +1,13 @@
 package edu.selu.cgonzales.hammondddd;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -31,13 +34,22 @@ public class BusinessActivity extends AppCompatActivity {
         } else {
             extraString = (String) extras.get(Intent.EXTRA_TEXT);
         }
-        List<Business> businesses = getBusinessList(extraString);
+        final List<Business> businesses = getBusinessList(extraString);
+        final Context context = this;
 
         BusinessArrayAdapter adapter = new BusinessArrayAdapter(this, businesses);
         final ListView businessList = (ListView) findViewById(R.id.businessList);
         businessList.setAdapter(adapter);
         businessList.setEmptyView(findViewById(R.id.emptyBusinessView));
-        // TODO - add an on click listener
+        businessList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Business business = businesses.get(position);
+                HammondDDD context = (HammondDDD) getApplicationContext();
+                context.setViewBusiness(business);
+                openBusiness();
+            }
+        });
     }
 
     @Override
@@ -61,5 +73,10 @@ public class BusinessActivity extends AppCompatActivity {
         // TODO - add a search for a query string
 
         return new ArrayList<>();
+    }
+
+    private void openBusiness(){
+        Intent viewBusinessIntent = new Intent(this, ViewBusinessActivity.class);
+        startActivity(viewBusinessIntent);
     }
 }

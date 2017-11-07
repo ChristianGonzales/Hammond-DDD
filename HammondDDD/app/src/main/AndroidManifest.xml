@@ -55,6 +55,11 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="edu.selu.cgonzales.hammondddd.MainActivity" />
         </activity>
+        <activity android:name=".ViewBusinessActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.selu.cgonzales.hammondddd.BusinessActivity" />
+        </activity>
     </application>
 
 </manifest>

@@ -1,6 +1,8 @@
 package edu.selu.cgonzales.hammondddd.Data;
 
-public class Business extends Entity {
+import java.io.Serializable;
+
+public class Business extends Entity implements Serializable {
 
     private String phoneNumber;
     private String category;
