@@ -6,7 +6,7 @@
 
     <!-- Default Strings -->
     <string name="no_events">Error Loading Events...</string>
-    <string name="no_businesses">No Businesses Found</string>
+    <string name="no_business">No Businesses Found</string>
 
     <!-- Contact Strings -->
     <string name="company_name">Hammond Downtown Development</string>
