@@ -1,5 +1,6 @@
 package edu.selu.cgonzales.hammondddd;
 
+import android.app.SearchManager;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -12,11 +13,14 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import edu.selu.cgonzales.hammondddd.Data.Business;
 import edu.selu.cgonzales.hammondddd.Utils.BusinessArrayAdapter;
 
 public class BusinessActivity extends AppCompatActivity {
+
+    private static List<Business> businesses;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,14 +32,19 @@ public class BusinessActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         String extraString;
-        Bundle extras = getIntent().getExtras();
-        if (extras == null){
-            extraString = null;
+        Intent intent = getIntent();
+        if (Intent.ACTION_SEARCH.equals(intent.getAction())){
+            extraString = intent.getStringExtra(SearchManager.QUERY);
+            businesses = getBusinessList(extraString);
         } else {
-            extraString = (String) extras.get(Intent.EXTRA_TEXT);
+            Bundle extras = intent.getExtras();
+            if (extras == null){
+                extraString = null;
+            } else {
+                extraString = (String) extras.get(Intent.EXTRA_TEXT);
+            }
+            businesses = getBusinessList(extraString);
         }
-        final List<Business> businesses = getBusinessList(extraString);
-        final Context context = this;
 
         BusinessArrayAdapter adapter = new BusinessArrayAdapter(this, businesses);
         final ListView businessList = (ListView) findViewById(R.id.businessList);
@@ -70,9 +79,17 @@ public class BusinessActivity extends AppCompatActivity {
             }
         }
 
-        // TODO - add a search for a query string
-
-        return new ArrayList<>();
+        List<Business> resultSet = new ArrayList<>();
+        filterString = filterString.toLowerCase();
+        for (Map.Entry<String, List<Business>> entry : context.getBusinessList().entrySet()){
+            List<Business> tmp = entry.getValue();
+            for (Business b : tmp){
+                if (b.getName().toLowerCase().contains(filterString)){
+                    resultSet.add(b);
+                }
+            }
+        }
+        return resultSet;
     }
 
     private void openBusiness(){
