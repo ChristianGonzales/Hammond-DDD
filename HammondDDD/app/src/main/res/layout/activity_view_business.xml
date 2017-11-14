@@ -26,22 +26,35 @@
         <TextView
             android:id="@+id/view_business_name"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="16dp" />
 
         <TextView
             android:id="@+id/view_business_location"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="16dp" />
 
         <TextView
             android:id="@+id/view_business_phone"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="16dp" />
 
         <TextView
             android:id="@+id/view_business_category"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="16dp" />
 
         <Button
             android:id="@+id/view_action_directions"
@@ -49,7 +62,8 @@
             android:layout_height="wrap_content"
             android:background="@color/colorPrimaryDark"
             android:textColor="@color/colorAccent"
-            android:text="@string/action_directions"/>
+            android:text="@string/action_directions"
+            android:layout_marginBottom="16dp" />
 
         <Button
             android:id="@+id/view_action_website"
@@ -57,7 +71,8 @@
             android:layout_height="wrap_content"
             android:background="@color/colorPrimaryDark"
             android:textColor="@color/colorAccent"
-            android:text="@string/action_website"/>
+            android:text="@string/action_website"
+            android:layout_marginBottom="16dp" />
 
     </LinearLayout>
 
