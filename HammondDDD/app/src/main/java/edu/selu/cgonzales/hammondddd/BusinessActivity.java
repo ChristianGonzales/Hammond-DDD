@@ -35,7 +35,6 @@ public class BusinessActivity extends AppCompatActivity {
         Intent intent = getIntent();
         if (Intent.ACTION_SEARCH.equals(intent.getAction())){
             extraString = intent.getStringExtra(SearchManager.QUERY);
-            businesses = getBusinessList(extraString);
         } else {
             Bundle extras = intent.getExtras();
             if (extras == null){
@@ -43,6 +42,8 @@ public class BusinessActivity extends AppCompatActivity {
             } else {
                 extraString = (String) extras.get(Intent.EXTRA_TEXT);
             }
+        }
+        if (extraString != null){
             businesses = getBusinessList(extraString);
         }
 
